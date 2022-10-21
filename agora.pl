@@ -16,7 +16,7 @@ system("cat $ARGV[0] | tr -s ' ' '\n' | grep '[0-9]\$'> $ARGV[3]");
 open($prefix,"+<$ARGV[3]");
 @array1 = <$prefix>;
 @array2 = <$file_B>;
-for($i=0;$i<$#array1;$i++)
+for($i=0;$i<=$#array1;$i++)
 {
 	if ($array1[$i] =~ /^\d+/)
 	{
